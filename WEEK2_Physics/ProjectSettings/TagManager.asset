@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Plat1
+  - Plat2
+  - sq
   layers:
   - Default
   - TransparentFX
