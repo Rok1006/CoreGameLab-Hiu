@@ -1,0 +1,27 @@
+
+Lab_Anim.png
+size: 548,596
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 2, 2
+  size: 366, 261
+  orig: 366, 261
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 265
+  size: 474, 329
+  orig: 474, 329
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: true
+  xy: 370, 53
+  size: 210, 176
+  orig: 210, 176
+  offset: 0, 0
+  index: -1
