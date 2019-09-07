@@ -7,6 +7,8 @@ TagManager:
   - Plat1
   - Plat2
   - sq
+  - Bk
+  - Wh
   layers:
   - Default
   - TransparentFX
@@ -19,11 +21,11 @@ TagManager:
   - BackGround
   - PLayer
   - Cannon
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BBound
+  - Bird
+  - Ground
+  - Ball
+  - Bird2
   - 
   - 
   - 
@@ -44,6 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 1565704611
+    locked: 0
   - name: Player
     uniqueID: 3671037317
+    locked: 0
+  - name: Cursor
+    uniqueID: 2747889849
     locked: 0

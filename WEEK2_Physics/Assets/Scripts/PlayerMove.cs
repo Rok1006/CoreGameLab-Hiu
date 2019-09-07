@@ -21,8 +21,7 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
-        velocity.x += movement.x * speed * Time.fixedDeltaTime;
-        rb.velocity = velocity;
+        rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
 
     }
     // Update is called once per frame
@@ -41,11 +40,11 @@ public class PlayerMove : MonoBehaviour
 
         if (movement.x == 0)   //for animation just check the teacher sample
         {
-            //animator.SetBool("isIDLE", true);
+            animator.SetBool("isMoving", false);
         }
         else
         {
-            //animator.SetBool("isIDLE", true);
+            animator.SetBool("isMoving", true);
 
         }
 

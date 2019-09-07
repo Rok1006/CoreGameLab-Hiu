@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ShootingCannon : MonoBehaviour
 {
+    public Vector3 minPos;
+    public Vector3 maxPos;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,7 @@ public class ShootingCannon : MonoBehaviour
         transform.up = direction;
         //float angle = Mathf.Atan2(dirBtwSquare.y, dirBtwSquare.x) * Mathf.Rad2Deg;
         //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);   //converting the angle of the objeect to another object
+     
 
     }
 }
