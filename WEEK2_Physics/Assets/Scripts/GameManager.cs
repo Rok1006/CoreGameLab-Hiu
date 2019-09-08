@@ -12,8 +12,10 @@ public class GameManager : MonoBehaviour
     public Text Score;
     public Canvas Instruct;
     public Canvas ScoreShow;
+    public Canvas End;
     public GameObject spawn1;
     public string sceneName;
+    public float timer;
 
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         Instruct.GetComponent<Canvas>().enabled = true;
         ScoreShow.GetComponent<Canvas>().enabled = false;
+        End.GetComponent<Canvas>().enabled = false;
         spawn1.SetActive(false);
 
     }
@@ -38,8 +41,6 @@ public class GameManager : MonoBehaviour
 
         }
 
-
-
         if (score > 9)
         {
            Score.text = "0" + score.ToString();
@@ -52,11 +53,19 @@ public class GameManager : MonoBehaviour
         {
             Score.text = "00" + score.ToString();
         }
+       
+      
 
-        if(score == 15)
+        if (score == 10)
         {
-            //u win
+            End.GetComponent<Canvas>().enabled = true;
+            Time.timeScale = 0;
+
         }
+        //if(timer > 1)
+        //{
+        //    Time.timeScale = 1;
+        //}
     }
     public void Menu()
     {
