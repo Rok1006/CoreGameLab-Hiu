@@ -9,12 +9,14 @@ public class Shoot : MonoBehaviour
     //Rigidbody Rb;
     public float bulletSpeed;
     public GameObject ball;
+    AudioSource audio;
 
 
     // Start is called before the first frame update
     void Start()
     {
-       //ball = ballPrefab.GetComponent<Rigidbody>();
+        //ball = ballPrefab.GetComponent<Rigidbody>();
+        audio = GetComponent<AudioSource>();
 
     }
 
@@ -23,6 +25,7 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            audio.Play();
             //Instantiate(ballPrefab, startPos.transform.position, Quaternion.identity);
             //Rb.velocity = Vector2.zero;
             //Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition); //translate it into actual position
