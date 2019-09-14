@@ -1,0 +1,55 @@
+
+Anim.png
+size: 758,293
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BOdy2
+  rotate: true
+  xy: 617, 97
+  size: 194, 139
+  orig: 194, 139
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 2, 26
+  size: 265, 445
+  orig: 265, 445
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 449, 10
+  size: 281, 166
+  orig: 281, 166
+  offset: 0, 0
+  index: -1
+LowerLeftLeg
+  rotate: true
+  xy: 2, 2
+  size: 22, 84
+  orig: 22, 84
+  offset: 0, 0
+  index: -1
+LowerRLeg
+  rotate: true
+  xy: 88, 2
+  size: 22, 84
+  orig: 22, 84
+  offset: 0, 0
+  index: -1
+upperLeftLeg
+  rotate: false
+  xy: 617, 9
+  size: 40, 86
+  orig: 40, 86
+  offset: 0, 0
+  index: -1
+upperRLeg
+  rotate: false
+  xy: 659, 9
+  size: 40, 86
+  orig: 40, 86
+  offset: 0, 0
+  index: -1
