@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 0b2396f55e5da44208df0cd5ff40c196
+guid: 769c40909dfb040c1876e3aa0fa55cf8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7508633101924219933
-    second: ForeGround_0
+      213: 2033960975386372411
+    second: 333_0
+  - first:
+      213: -5299102277320700307
+    second: 333_1
+  - first:
+      213: 7921280039528484024
+    second: 333_2
+  - first:
+      213: -2381877625605217422
+    second: 333_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -63,48 +72,48 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 100
-    crunchedCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 100
-    crunchedCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 100
-    crunchedCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 100
-    crunchedCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ForeGround_0
+      name: 333_0
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 312
-        height: 1080
+        x: 1042
+        y: 430
+        width: 194
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +136,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f84d9363a73740a78b4401235f77309
-      internalID: 7508633101924219933
+      spriteID: c863cd67c66034d95afd7d585875a7f5
+      internalID: 2033960975386372411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 333_1
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 350
+        width: 315
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15791f9eba65043e9a2d11b396ad54a5
+      internalID: -5299102277320700307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 333_2
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 130
+        width: 49
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8cd90ffb3414511abc70df016e8c0d
+      internalID: 7921280039528484024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 333_3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 35
+        width: 218
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a98a5196be4e4ddbb8a4e472834f291
+      internalID: -2381877625605217422
       vertices: []
       indices: 
       edges: []

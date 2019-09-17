@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Slam
+  - Block1
+  - Block2
   layers:
   - Default
   - TransparentFX
@@ -13,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ground
+  - FallenBlocks
   - 
   - 
   - 
@@ -46,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 542558517
+    locked: 0
+  - name: Black
+    uniqueID: 3043621685
     locked: 0

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 0b2396f55e5da44208df0cd5ff40c196
+guid: 36e6978a03c844321bc3e7170782cbf0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7508633101924219933
-    second: ForeGround_0
+      213: 1318883831799855257
+    second: Fog1_0
+  - first:
+      213: -6318944573905214515
+    second: Fog1_1
+  - first:
+      213: -5165584676709221519
+    second: Fog1_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ForeGround_0
+      name: Fog1_0
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 312
-        height: 1080
+        x: 144
+        y: 680
+        width: 264
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +133,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f84d9363a73740a78b4401235f77309
-      internalID: 7508633101924219933
+      spriteID: 217eb4aab27114b058fbe521bcd7fb30
+      internalID: 1318883831799855257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fog1_1
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 544
+        width: 176
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8062445ac2b5b4ee59e1bc4ff6c55531
+      internalID: -6318944573905214515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fog1_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 120
+        width: 287
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f173ca11fed4ab5837a9cea369951a
+      internalID: -5165584676709221519
       vertices: []
       indices: 
       edges: []
