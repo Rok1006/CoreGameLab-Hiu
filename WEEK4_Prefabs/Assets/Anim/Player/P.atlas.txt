@@ -1,0 +1,69 @@
+
+P.png
+size: 526,463
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 333, 112
+  size: 205, 180
+  orig: 205, 180
+  offset: 0, 0
+  index: -1
+Gun
+  rotate: false
+  xy: 2, 319
+  size: 503, 142
+  orig: 503, 142
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 90
+  size: 329, 227
+  orig: 329, 227
+  offset: 0, 0
+  index: -1
+LHand
+  rotate: false
+  xy: 333, 7
+  size: 115, 103
+  orig: 115, 103
+  offset: 0, 0
+  index: -1
+LLeg
+  rotate: true
+  xy: 74, 66
+  size: 22, 53
+  orig: 22, 53
+  offset: 0, 0
+  index: -1
+LTHigh
+  rotate: true
+  xy: 2, 60
+  size: 28, 70
+  orig: 28, 70
+  offset: 0, 0
+  index: -1
+RTHigh
+  rotate: true
+  xy: 2, 60
+  size: 28, 70
+  orig: 28, 70
+  offset: 0, 0
+  index: -1
+RHand
+  rotate: true
+  xy: 450, 2
+  size: 108, 74
+  orig: 108, 74
+  offset: 0, 0
+  index: -1
+RLeg
+  rotate: true
+  xy: 129, 60
+  size: 28, 50
+  orig: 28, 50
+  offset: 0, 0
+  index: -1

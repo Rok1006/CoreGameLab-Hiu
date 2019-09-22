@@ -1,0 +1,48 @@
+
+Bug.png
+size: 293,229
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BackW
+  rotate: false
+  xy: 209, 15
+  size: 60, 82
+  orig: 60, 82
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 11
+  size: 205, 216
+  orig: 205, 216
+  offset: 0, 0
+  index: -1
+FrontW
+  rotate: true
+  xy: 209, 99
+  size: 128, 82
+  orig: 128, 82
+  offset: 0, 0
+  index: -1
+LLeg
+  rotate: false
+  xy: 271, 2
+  size: 18, 95
+  orig: 18, 95
+  offset: 0, 0
+  index: -1
+MLeg
+  rotate: false
+  xy: 271, 2
+  size: 18, 95
+  orig: 18, 95
+  offset: 0, 0
+  index: -1
+RLeg
+  rotate: false
+  xy: 271, 2
+  size: 18, 95
+  orig: 18, 95
+  offset: 0, 0
+  index: -1
