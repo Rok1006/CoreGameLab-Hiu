@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Trigger
   - T
+  - Poison
+  - Bound
+  - Bullet
+  - Bug
+  - SpawnP
+  - Treasure
   layers:
   - Default
   - TransparentFX
@@ -16,12 +22,12 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Poison
+  - Bug
+  - Player
+  - Spike
+  - Bullet
+  - Bound
   - 
   - 
   - 

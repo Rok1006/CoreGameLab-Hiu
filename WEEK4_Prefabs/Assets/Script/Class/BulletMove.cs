@@ -7,6 +7,8 @@ public class BulletMove : MonoBehaviour
     float timer;
     public int bulletSpeed;
     Rigidbody2D rb;
+    //public GameObject deadBug;
+
     //public GameObject shotPos;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,10 @@ public class BulletMove : MonoBehaviour
         if (PlayerMove.Instance.turnLeft == true)
         {
             rb.AddForce(Vector2.left * bulletSpeed);
+            //transform.Translate(Vector2.left * bulletSpeed); 
+            //transform.position += Vector3.left * bulletSpeed;
+
+
         }
         if (PlayerMove.Instance.turnRight == true)
         {
@@ -41,8 +47,21 @@ public class BulletMove : MonoBehaviour
         //}
 
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
-
+        if (collision.gameObject.tag == "Bound")
+        {
+            Destroy(gameObject);
+        }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bug")
+        {
+            Destroy(gameObject);
+            //Instantiate(deadBug, collision.transform.position, Quaternion.identity);
+            //BugManager.Instance.health --;
+            //bug health minus
+        }
+        }
 }

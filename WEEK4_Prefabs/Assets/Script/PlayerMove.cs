@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class PlayerMove : MonoBehaviour
     public bool turnLeft;
 
     public static PlayerMove Instance;
+    public string sceneName;
+    AudioSource audio;
 
     void Awake()
     {
@@ -47,6 +50,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Rb = bulletP.GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     void FixedUpdate() //!
@@ -60,7 +64,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           
+            audio.Play();
             GameObject bullet = (GameObject)Instantiate(
                                     bulletP,
                                     shotPos.transform.position,
@@ -173,6 +177,13 @@ public class PlayerMove : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
             isMoving = true;
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Treasure")
+        {
+            //SceneManager.LoadScene(sceneName);
         }
     }
 }
