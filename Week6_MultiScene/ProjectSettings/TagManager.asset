@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Upgrade
+  - Door1
+  - Door2
+  - ButtonTrigger
+  - Spike
+  - MoveCamera
+  - Ball
+  - GoBack
+  - Say
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - BallBarrier
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Far
+    uniqueID: 53355471
+    locked: 0
+  - name: BG
+    uniqueID: 1526001651
+    locked: 0
+  - name: Player
+    uniqueID: 1192838937
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3950961079
+    locked: 0
+  - name: Night
+    uniqueID: 2763121845
+    locked: 0

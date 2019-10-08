@@ -11,7 +11,7 @@ public class ShootingCannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("hello");
     }
 
     // Update is called once per frame
@@ -27,10 +27,10 @@ public class ShootingCannon : MonoBehaviour
 
 
          Vector3 direction = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y); //getting the direction between one object to another
-        //transform.up = direction;
+        transform.up = direction;
         //float angle = Mathf.Atan2(dirBtwSquare.y, dirBtwSquare.x) * Mathf.Rad2Deg;
         //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);   //converting the angle of the objeect to another object
-     
+     Debug.Log(mousePos);
 
     }
 }
