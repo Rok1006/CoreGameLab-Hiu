@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Grid
+  - MatchCheck
+  - ColorfulBG
+  - Danger
+  - Bound
+  - Glass
+  - End
+  - Text1
+  - Text2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - gridLayer
+  - matchLayer
+  - Ground
+  - Chain
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: RBG
+    uniqueID: 1780481627
+    locked: 0
+  - name: BG
+    uniqueID: 1904108761
+    locked: 0
+  - name: Grass
+    uniqueID: 3138110873
+    locked: 0
+  - name: Player
+    uniqueID: 767786163
+    locked: 0
+  - name: ChainP
+    uniqueID: 3171369629
+    locked: 0
+  - name: UI
+    uniqueID: 3295185061
+    locked: 0

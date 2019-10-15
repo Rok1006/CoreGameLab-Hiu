@@ -9,6 +9,7 @@ public class Scene01 : MonoBehaviour
     public GameObject ball;
    public Canvas Instruct;
     public bool backInPos;
+    public Canvas word;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class Scene01 : MonoBehaviour
         {
             backInPos = true;
             Instruct.GetComponent<Canvas>().enabled = false;
+            word.GetComponent<Canvas>().enabled = false;
 
         }
 

@@ -1,0 +1,62 @@
+
+Player_GasMasker.png
+size: 1253,403
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BackLeg
+  rotate: true
+  xy: 1079, 24
+  size: 54, 119
+  orig: 54, 119
+  offset: 0, 0
+  index: -1
+BackThigh
+  rotate: true
+  xy: 434, 22
+  size: 49, 117
+  orig: 49, 117
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 434, 73
+  size: 328, 449
+  orig: 328, 449
+  offset: 0, 0
+  index: -1
+FrontLeg
+  rotate: true
+  xy: 672, 36
+  size: 35, 125
+  orig: 35, 125
+  offset: 0, 0
+  index: -1
+FrontThigh
+  rotate: true
+  xy: 553, 25
+  size: 46, 117
+  orig: 46, 117
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 2
+  size: 430, 399
+  orig: 430, 399
+  offset: 0, 0
+  index: -1
+LArm
+  rotate: false
+  xy: 885, 19
+  size: 192, 382
+  orig: 192, 382
+  offset: 0, 0
+  index: -1
+RArm
+  rotate: false
+  xy: 1079, 80
+  size: 172, 321
+  orig: 172, 321
+  offset: 0, 0
+  index: -1

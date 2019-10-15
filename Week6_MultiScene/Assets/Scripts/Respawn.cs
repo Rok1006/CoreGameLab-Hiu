@@ -30,7 +30,7 @@ public class Respawn : MonoBehaviour
         if(die > 3)
         {
             Lose.GetComponent<Canvas>().enabled = true;
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

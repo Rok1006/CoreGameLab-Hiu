@@ -2222,12 +2222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door1: {fileID: 0}
-  Player: {fileID: 800306519}
-  ball: {fileID: 0}
   Door1Portal: {fileID: 0}
   Win: {fileID: 0}
-  Instruct: {fileID: 0}
-  backInPos: 0
 --- !u!4 &1438997179
 Transform:
   m_ObjectHideFlags: 0
@@ -3257,11 +3253,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77115390}
     m_Modifications:
-    - target: {fileID: 3889218891484978892, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec,
-        type: 3}
-      propertyPath: m_Name
-      value: BloodWick
-      objectReference: {fileID: 0}
     - target: {fileID: 3889218891484978889, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3316,6 +3307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889218891484978892, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodWick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec, type: 3}
@@ -3401,6 +3397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lose
+      objectReference: {fileID: 0}
+    - target: {fileID: 145256245739236031, guid: 585ce8e934935452a9d008128cc7c2e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8956750509122840079, guid: 585ce8e934935452a9d008128cc7c2e3,
         type: 3}
@@ -3506,11 +3507,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 145256245739236031, guid: 585ce8e934935452a9d008128cc7c2e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 585ce8e934935452a9d008128cc7c2e3, type: 3}
@@ -3671,6 +3667,7 @@ GameObject:
   - component: {fileID: 1978464623}
   - component: {fileID: 1978464622}
   - component: {fileID: 1978464625}
+  - component: {fileID: 1978464626}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3761,6 +3758,19 @@ MonoBehaviour:
   bounds: 1
   minCameraPos: {x: 0, y: 0, z: -10}
   maxCameraPos: {x: 0, y: 0, z: -10}
+--- !u!114 &1978464626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978464621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 6f41af7708e4649128b157f155cd6897, type: 2}
 --- !u!1 &2031961255
 GameObject:
   m_ObjectHideFlags: 0

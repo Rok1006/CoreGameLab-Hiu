@@ -52,7 +52,7 @@ public class GameManage : MonoBehaviour
         //    //ball.transform.position = new Vector2(76.61f, -6.68f);
         //    Instruct.GetComponent<Canvas>().enabled = false;
         //}
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         //Instruct.GetComponent<Canvas>().enabled = true;
     }
   

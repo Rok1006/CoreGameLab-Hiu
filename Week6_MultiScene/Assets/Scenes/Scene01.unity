@@ -6388,6 +6388,7 @@ MonoBehaviour:
   ball: {fileID: 414307744}
   Instruct: {fileID: 677414875}
   backInPos: 0
+  word: {fileID: 1754426434}
 --- !u!4 &862570957
 Transform:
   m_ObjectHideFlags: 0
@@ -7364,6 +7365,7 @@ GameObject:
   - component: {fileID: 1121342948}
   - component: {fileID: 1121342951}
   - component: {fileID: 1121342952}
+  - component: {fileID: 1121342953}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7466,6 +7468,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a111e1ac4bb84a3daa5ba61e915b848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1121342953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121342947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 6f41af7708e4649128b157f155cd6897, type: 2}
 --- !u!1 &1124194510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8487,6 +8502,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!223 &1754426434 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7654456965080758062, guid: 073dc4296e29846f598b87c82464eb54,
+    type: 3}
+  m_PrefabInstance: {fileID: 9057561146664042468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1871555619
 GameObject:
   m_ObjectHideFlags: 0
@@ -9378,11 +9399,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3889218891484978892, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec,
-        type: 3}
-      propertyPath: m_Name
-      value: BloodWick
-      objectReference: {fileID: 0}
     - target: {fileID: 3889218891484978889, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9437,6 +9453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889218891484978892, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec,
+        type: 3}
+      propertyPath: m_Name
+      value: BloodWick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c233b193c6d8b4d3ab7f4f2fdfdc47ec, type: 3}
@@ -9530,7 +9551,7 @@ PrefabInstance:
     - target: {fileID: 8813596106621143321, guid: 073dc4296e29846f598b87c82464eb54,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 073dc4296e29846f598b87c82464eb54, type: 3}
