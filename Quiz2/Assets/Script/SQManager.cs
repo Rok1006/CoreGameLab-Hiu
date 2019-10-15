@@ -34,7 +34,7 @@ public class SQManager : MonoBehaviour
         //Vector3 direction = new Vector2(mousePos.x - sq.transform.position.x, mousePos.y - sq.transform.position.y);
        //Vector2 dist = new Vector2(sq.transform.position.x-mousePos.x, sq.transform.position.y - mousePos.y );
         float dist = Vector3.Distance(mousePos, sq.transform.position);
-        if (dist< 0.5 )
+        if (dist<2.5 )
         {
 
             timer -= Time.deltaTime;
