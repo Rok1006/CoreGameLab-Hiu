@@ -6,18 +6,16 @@ using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
-    //List<string> eachCom = new List<string>();
+    [Header("PlayerInput")]
     public string command;
     public float speed;
-    //public GameObject inputField;
     public InputField mainInputField;
     public Image Error;
-    public GameObject Player;
     public float timer;
     public static PlayerInput Instance;
-     Rigidbody2D Rb; //player rigidbody
-    float forceAmount;
+ 
 
+    [Header("Booleans")]
     public bool moveRight;
     public bool moveLeft;
     public bool stop;
@@ -26,19 +24,30 @@ public class PlayerInput : MonoBehaviour
     public bool boost;
     public bool jump;
 
+    [Header("PlayerMove")]
     Animator animator;
     Spine.Bone myBone;
-
+    public GameObject Player;
+    Rigidbody2D Rb; //player rigidbody
+    float forceAmount;
     public Transform groundPos;  //feetpos
     private bool isGrounded;
     public float checkRadius;
     public LayerMask whatIsGround;
-
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
     public float jumpForce;
 
+    [Header("PlayerMoveToward")]   //another way of moving
+    public GameObject leftTarget;
+    public GameObject rightTarget;
+    public GameObject leftFasterTarget;
+    public GameObject rightFasterTarget;
+    public int normalSpeed;
+    public int fastSpeed;
+
+    [Header("UI")]
     public Canvas startInstruct;
 
 
@@ -56,7 +65,10 @@ public class PlayerInput : MonoBehaviour
        Rb = Player.GetComponent<Rigidbody2D>();
         Error.GetComponent<Image>().enabled = false;
         startInstruct.GetComponent<Canvas>().enabled = true;
-
+        rightTarget.SetActive(false);
+        leftTarget.SetActive(false);
+        rightFasterTarget.SetActive(false);
+        leftFasterTarget.SetActive(false);
 
 
 
@@ -71,7 +83,7 @@ public class PlayerInput : MonoBehaviour
         {
             Error.GetComponent<Image>().enabled = false;
         }
-        if (command == "++")
+        if (command == "]]")
             {
                 moveRight = true;
                 moveLeft = false;
@@ -81,7 +93,7 @@ public class PlayerInput : MonoBehaviour
             boost = false;
             jump = false;
             Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
+            mainInputField.text = "";
 
         } 
         else { Error.GetComponent<Image>().enabled = true; }
@@ -95,9 +107,9 @@ public class PlayerInput : MonoBehaviour
             boost = false;
             jump = false;
             Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
+            mainInputField.text = "";
         }
-            if (command == "--")
+            if (command == "[[")
             {
                 moveRight = false;
                 moveLeft = true;
@@ -107,9 +119,9 @@ public class PlayerInput : MonoBehaviour
             boost = false;
             jump = false;
             Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
+            mainInputField.text = "";
         }
-            if (command == "]]")
+            if (command == "\\")
             {
                 moveRightFaster = true;
                 moveLeftFaster = false;
@@ -119,9 +131,9 @@ public class PlayerInput : MonoBehaviour
             boost = false;
             jump = false;
             Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
+            mainInputField.text = "";
         }
-            if (command == "[[")
+            if (command == "//")
             {
                 moveRightFaster = false;
                 moveLeftFaster = true;
@@ -131,21 +143,21 @@ public class PlayerInput : MonoBehaviour
             boost = false;
             jump = false;
             Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
+            mainInputField.text = "";
         }
-        if (command == "+]]")
-        {
-            moveRightFaster = false;
-            moveLeftFaster = false;
-            moveRight = false;
-            moveLeft = false;
-            boost = true;
-            stop = false;
-            jump = false;
-            Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
-        }
-        if (command == "\\")
+        //if (command == "+]]")
+        //{
+        //    moveRightFaster = false;
+        //    moveLeftFaster = false;
+        //    moveRight = false;
+        //    moveLeft = false;
+        //    boost = true;
+        //    stop = false;
+        //    jump = false;
+        //    Error.GetComponent<Image>().enabled = false;
+        //    //mainInputField.text = "";
+        //}
+        if (command == ";;")
         {
             moveRightFaster = false;
             moveLeftFaster = false;
@@ -155,7 +167,7 @@ public class PlayerInput : MonoBehaviour
             stop = false;
             jump = true;
             Error.GetComponent<Image>().enabled = false;
-            //mainInputField.text = "";
+            mainInputField.text = "";
         }
 
     }
@@ -171,45 +183,70 @@ public class PlayerInput : MonoBehaviour
         if (moveRight == true)
         {
             animator.SetBool("isWalking", true);
-           //animator.SetBool("isJump", false);
-            //Player.transform.eulerAngles = new Vector3(0, 0, 0);
-            //Player.transform.Translate(new Vector2(Player.transform.position.x + 1, 0) * speed * 0.01f);
-            Rb.AddForce(new Vector2(3.5f, 1.0f) * 1.0f);
+           //Rb.AddForce(new Vector2(3.5f, 1.0f) * 1.0f);  original
+
+            rightTarget.SetActive(true);
+            leftTarget.SetActive(false);
+            rightFasterTarget.SetActive(false);
+            leftFasterTarget.SetActive(false);
+
+            float mrs = normalSpeed * Time.deltaTime;
+            Player.transform.position = Vector3.MoveTowards(Player.transform.position, rightTarget.transform.position, mrs);
+
         }
         if (moveRightFaster == true)
         {
             animator.SetBool("isWalking", true);
-            //animator.SetBool("isJump", false);
-            Rb.AddForce(new Vector2(4.5f, 1.0f) * 1.0f);
-            //Player.transform.eulerAngles = new Vector3(0, 180, 0);
-            //Player.transform.Translate(new Vector2(Player.transform.position.x + 1, 0) * speed * 0.02f);  //try using rigidbody then
+            //Rb.AddForce(new Vector2(4.5f, 1.0f) * 1.0f);
+            rightTarget.SetActive(false);
+            leftTarget.SetActive(false);
+            rightFasterTarget.SetActive(true);
+            leftFasterTarget.SetActive(false);
+
+            float mrfs = fastSpeed * Time.deltaTime;
+            Player.transform.position = Vector3.MoveTowards(Player.transform.position, rightFasterTarget.transform.position, mrfs);
         }
-        if (boost == true)
-        {
-            animator.SetBool("isWalking", true);
-            //animator.SetBool("isJump", false);
-            Rb.AddForce(new Vector2(8.0f, 1.0f) * 1.0f);
-        }
+        //if (boost == true)
+        //{
+        //    animator.SetBool("isWalking", true);
+        //    Rb.AddForce(new Vector2(8.0f, 1.0f) * 1.0f);
+        //}
         if (stop == true)
         {
             animator.SetBool("isWalking", false);
             animator.SetBool("isJump", false);
-            Rb.velocity = Vector2.zero;
+            //Rb.velocity = Vector2.zero;
+
+            rightTarget.SetActive(false);
+            leftTarget.SetActive(false);
+            rightFasterTarget.SetActive(false);
+            leftFasterTarget.SetActive(false);
             //Player.transform.Translate(0,0,0);
         }
         if (moveLeft == true)
         {
             animator.SetBool("isWalking", true);
-            //animator.SetBool("isJump", false);
-            Rb.AddForce(new Vector2(-3.5f, 1.0f) * 1.0f);
-            //Player.transform.eulerAngles = new Vector3(0, 180, 0);
-            //Player.transform.Translate(new Vector2(Player.transform.position.x + 1, 0) * -speed * 0.01f);
+            //Rb.AddForce(new Vector2(-3.5f, 1.0f) * 1.0f);
+            rightTarget.SetActive(false);
+            leftTarget.SetActive(true);
+            rightFasterTarget.SetActive(false);
+            leftFasterTarget.SetActive(false);
+
+            float mls = normalSpeed * Time.deltaTime;
+            Player.transform.position = Vector3.MoveTowards(Player.transform.position, leftTarget.transform.position, mls);
         }
         if (moveLeftFaster == true)
         {
             animator.SetBool("isWalking", true);
-            //animator.SetBool("isJump", false);
-            Rb.AddForce(new Vector2(-4.0f, 1.0f) * 1.0f);
+           //Rb.AddForce(new Vector2(-4.0f, 1.0f) * 1.0f);
+
+            rightTarget.SetActive(false);
+            leftTarget.SetActive(false);
+            rightFasterTarget.SetActive(false);
+            leftFasterTarget.SetActive(true);
+
+            float mlfs = fastSpeed * Time.deltaTime;
+            Player.transform.position = Vector3.MoveTowards(Player.transform.position, leftFasterTarget.transform.position, mlfs);
         }
       
             //Rb.velocity = Vector2.up * 3;

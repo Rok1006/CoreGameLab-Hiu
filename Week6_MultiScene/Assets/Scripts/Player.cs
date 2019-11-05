@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     Animator animator;
     public static Player Instance;
     public bool gotBall;
-    bool open;
+
     public bool goBack;
     AudioSource footstep;
     public GameObject words;
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         gotBall = false;
-        open = false;
+        //open = false;
         goBack = false;
         footstep = GetComponent<AudioSource>();
         words.SetActive(false);
@@ -140,7 +140,7 @@ public class Player : MonoBehaviour
 
         if (gotBall)
         {
-            open = true;
+            Ball.Instance.openwithball = true;
         }
     }
     void OnCollisionEnter2D(Collision2D col)

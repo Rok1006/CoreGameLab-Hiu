@@ -7,19 +7,22 @@ using UnityEngine.UI;
 public class GameManage : MonoBehaviour
 {
     public static GameManage Vill;
-    public GameObject Door1;
+    //public GameObject Door1;
     //public GameObject Player;
     //public GameObject ball;
 
 
-    Animator Door1Anim;
+    //Animator Door1Anim;
 
-    bool door1Open;
-    public GameObject Door1Portal;
-    public Canvas Win;
-   // public Canvas Instruct;
-   //public bool backInPos;
-
+    //public bool door1Open;
+    //public GameObject Door1Portal;
+    //public Canvas Win;
+    // public Canvas Instruct;
+    public bool backInPos;
+    public bool doorwillopen;
+    public bool Instructshouldclose;
+    public bool showIt;
+   
 
 
 
@@ -39,10 +42,15 @@ public class GameManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Door1Anim = Door1.GetComponent<Animator>();
+        doorwillopen = false;
+        Instructshouldclose = false;
+        backInPos = false;
+        showIt = false;
 
-        Debug.Log("Move!");
-        door1Open = false;
+        //Door1Anim = Door1.GetComponent<Animator>();
+
+        //Debug.Log("Move!");
+        //door1Open = false;
 
         //Ball.One.playerMove = true;
         //if (backInPos == true)
@@ -59,9 +67,14 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (HealthManager.Vill.die == 3)
         {
-            SceneManager.LoadScene(0);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                backInPos = false;
+                Instructshouldclose = false;
+                SceneManager.LoadScene(0);
+            }
         }
         //if (Input.GetKeyDown(KeyCode.Space))
         //{
@@ -69,31 +82,38 @@ public class GameManage : MonoBehaviour
         //   // Destroy(Instruct);
 
         //}
-            if (!door1Open)
-        {
-            Door1Anim.SetBool("Close", true);
-            Door1Anim.SetBool("Open", false);
-            Door1Portal.SetActive(false);
-        }
-        if (door1Open)
-        {
-            Door1Anim.SetBool("Close", false);
-            Door1Anim.SetBool("Open", true);
-            Door1Portal.SetActive(true);
-
-        }
-
-        if (Ball.One.doorShouldOpen == true)
-        {
-            door1Open = true;
-        }
-
-        //if (Ball.One.playerMove == true)
+        //if (door1Open == false)
         //{
-        //    backInPos = true;
-        //    Instruct.GetComponent<Canvas>().enabled = false;
+        //    Debug.Log("not opened");
+        //    Door1Anim.SetBool("Close", true);
+        //    Door1Anim.SetBool("Open", false);
+        //    Door1Portal.SetActive(false);
+        //}
+        //if (door1Open)
+        //{
+        //    Debug.Log("why is it opened");
+        //    Door1Anim.SetBool("Close", false);
+        //    Door1Anim.SetBool("Open", true);
+        //    Door1Portal.SetActive(true);
 
         //}
+        if (Ball.Instance.ballshow == true)
+        {
+            showIt = true;
+        }
+
+        if (Ball.Instance.doorShouldOpen == true)
+        {
+           doorwillopen = true;
+        }
+
+        if (Ball.Instance.playerMove == true)
+        {
+            backInPos = true;
+            Instructshouldclose = true;
+           //Instruct.GetComponent<Canvas>().enabled = false;
+
+        }
         //if (backInPos)
         //{
         //    //Debug.Log("Move!");

@@ -150,8 +150,12 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(0);  //reload scene
+                SceneManager.LoadScene(1);  //reload scene
 
+            }
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                SceneManager.LoadScene(0);  //reload scene
             }
         }
 

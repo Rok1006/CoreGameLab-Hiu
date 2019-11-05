@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HitDead : MonoBehaviour
 {
     [SerializeField] Transform Respawn;
     Animator animator;
+  
     //public Canvas Black;
     //public Image BlackOut;
     //public GameObject Player;
@@ -14,16 +16,19 @@ public class HitDead : MonoBehaviour
 
     void Start()
     {
+
         //animator = BlackOut.GetComponent<Animator>();
         //Black.GetComponent<Canvas>().enabled = false;
         //Player = GameObject.Find("Player");
         //Rb = Player.GetComponent<Rigidbody2D>();
+       
 
     }
     void Update()
     {
         //Black.GetComponent<Canvas>().enabled = false;
         //animator.SetBool("Dead", false);
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -33,6 +38,7 @@ public class HitDead : MonoBehaviour
             //animator.SetBool("Dead", true);
             collision.transform.position = Respawn.position;
             PlayerInput.Instance.stop = true;
+            Scene.Instance.death++;
         }
        
     }

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class End : MonoBehaviour
 {
     public Canvas EndInstruct;
+    public string sceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +17,14 @@ public class End : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightCommand))
+        if(EndInstruct.GetComponent<Canvas>().enabled == true)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (Input.GetKeyDown(KeyCode.RightCommand))
+            {
+                SceneManager.LoadScene(sceneName);
+            }
         }
+      
     }
 void OnTriggerEnter2D(Collider2D col)
     {

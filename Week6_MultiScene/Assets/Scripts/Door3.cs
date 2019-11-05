@@ -8,12 +8,14 @@ public class Door3 : MonoBehaviour
     Animator Door3Anim;
     bool door3Open;
     public GameObject Door3Portal;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         Door3Anim = DoorThree.GetComponent<Animator>();
         door3Open = true;
+        Player.transform.eulerAngles = new Vector3(0, 180, 0);
 
     }
 
