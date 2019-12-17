@@ -1,0 +1,125 @@
+
+Plants&Stuff.png
+size: 855,335
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BCloth
+  rotate: false
+  xy: 682, 53
+  size: 100, 109
+  orig: 100, 109
+  offset: 0, 0
+  index: -1
+BFlip
+  rotate: false
+  xy: 607, 12
+  size: 73, 161
+  orig: 73, 161
+  offset: 0, 0
+  index: -1
+BKHand
+  rotate: true
+  xy: 448, 72
+  size: 101, 157
+  orig: 101, 157
+  offset: 0, 0
+  index: -1
+BKLeg
+  rotate: true
+  xy: 273, 2
+  size: 39, 89
+  orig: 39, 89
+  offset: 0, 0
+  index: -1
+BKThigh
+  rotate: false
+  xy: 784, 8
+  size: 24, 79
+  orig: 24, 79
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: true
+  xy: 810, 51
+  size: 36, 20
+  orig: 36, 20
+  offset: 0, 0
+  index: -1
+FCloth
+  rotate: false
+  xy: 682, 164
+  size: 171, 169
+  orig: 171, 169
+  offset: 0, 0
+  index: -1
+FFlip
+  rotate: true
+  xy: 287, 43
+  size: 139, 159
+  orig: 139, 159
+  offset: 0, 0
+  index: -1
+FrontHand
+  rotate: true
+  xy: 2, 10
+  size: 38, 182
+  orig: 38, 182
+  offset: 0, 0
+  index: -1
+FrontLeg
+  rotate: true
+  xy: 186, 2
+  size: 46, 85
+  orig: 46, 85
+  offset: 0, 0
+  index: -1
+FrontThigh
+  rotate: true
+  xy: 364, 16
+  size: 25, 79
+  orig: 25, 79
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 493, 175
+  size: 158, 187
+  orig: 158, 187
+  offset: 0, 0
+  index: -1
+Hood
+  rotate: false
+  xy: 287, 184
+  size: 204, 149
+  orig: 204, 149
+  offset: 0, 0
+  index: -1
+Lamp
+  rotate: true
+  xy: 448, 2
+  size: 68, 138
+  orig: 68, 138
+  offset: 0, 0
+  index: -1
+Light
+  rotate: false
+  xy: 2, 50
+  size: 283, 283
+  orig: 283, 283
+  offset: 0, 0
+  index: -1
+LowBKArm
+  rotate: false
+  xy: 682, 8
+  size: 70, 43
+  orig: 70, 43
+  offset: 0, 0
+  index: -1
+UpBkArm
+  rotate: false
+  xy: 784, 89
+  size: 56, 73
+  orig: 56, 73
+  offset: 0, 0
+  index: -1
